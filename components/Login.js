@@ -1,16 +1,24 @@
 import React from "react";
 import Image from "next/image";
 import { useMoralis } from "react-moralis";
+import Fade from "react-reveal/Fade";
 
 function Login() {
   const { authenticate } = useMoralis();
   return (
-    <div className="bg-black relative ">
-      <h1>I'm login screen</h1>
+    <div className="bg-black relative z-50">
       <div className="flex flex-col absolute z-50 h-4/6 pr-10 w-full items-end justify-end">
+      <h1 className="text-4xl font-mono text-white text-center">
+        <Fade top>Welcome to the Decentralised</Fade>
+        </h1>
+        
+
+        <h2 className="text-7xl text-yellow-600 font-extrabold font-serif text-center p-10">
+        <Fade bottom>Chatt App</Fade>
+        </h2>
         <button
           onClick={() => authenticate()}
-          className="bg-gradient-to-r from-yellow-700 to-orange-300 rounded-lg p-5 mt-20 font-bold animate-pulse  "
+          className="bg-gradient-to-r from-red-500 to-pink-600 rounded-lg p-5 mt-20 font-bold animate-pulse mr-32  "
         >
           Login with METAMASK
         </button>
